@@ -1,0 +1,55 @@
+{
+  "name": "shader-graph",
+  "version": "0.0.1",
+  "package_version": 2,
+  "author": "youyou",
+  "contributions": {
+    "menu": [
+      {
+        "path": "shader-graph",
+        "label": "open",
+        "message": "open"
+      }
+    ],
+    "messages": {
+      "open": {
+        "methods": [
+          "open"
+        ]
+      },
+      "convert": {
+        "methods": [
+          "convert"
+        ]
+      }
+    }
+  },
+  "main": "./dist/browser.js",
+  "panels": {
+    "default": {
+      "title": "shader-graph",
+      "icon": "./static/icon.png",
+      "main": "./dist/panel/index.js",
+      "min-width": 400,
+      "min-height": 400,
+      "width": 400,
+      "height": 600
+    }
+  },
+  "scripts": {
+    "build-style": "lessc static/style/index.less > dist/index.css",
+    "build": "tsc",
+    "watch": "tsc --watch"
+  },
+  "devDependencies": {
+    "@types/node": "^14.0.24"
+  },
+  "dependencies": {
+    "fire-fs": "^0.2.4",
+    "fire-path": "^0.1.9",
+    "globby": "^11.0.1",
+    "lessc": "^1.0.2",
+    "typescript": "^3.9.7",
+    "vue": "^2.6.11"
+  }
+}
